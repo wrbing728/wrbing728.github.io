@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 冰冰啊
 subtitle:
 description:
 author: John Doe
-language:
+language: zh-CN
 timezone:
 
 # URL
@@ -63,9 +63,11 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: pacmanhover
+theme: TRNexT
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repository: https://github.com/wrbing728/wrbing728.github.io.git
+  branch: master
