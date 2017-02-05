@@ -6,22 +6,8 @@ tags:
 ## gitlab & github 多账号 ssh 配置
 
 1. 配置 ssh： 使用 ssh-keygen -t rsa -C "email" 设置两个 ssh key 分别给 github 和 gitlab 使用，注意命名区分（id_rsa_github、id_rsa）。（自行将公钥粘贴到 gitlab 和 github）
-2. 在~/.ssh/目录下，增加 config 文件，加上一下内容
-
-``` bash
-# gitlab
-Host gitlab
-  HostName gitlab.${gitlab domain}.com
-  IdentityFile ~/.ssh/id_rsa
-
-# github
-Host github
-  HostName github.com
-  IdentityFile ~/.ssh/id_rsa_github
-```
-
-3. 切换账号： 在 github 仓库下，使用 git config --local user.name 'name' && git config --local user.email 'email' 为 github 仓库设置独立的账号。
-4. 至此，使用 ssh -T git@github 和 ssh -T git@gitlab 看是否完成 ssh 权限配置。
+2. 切换账号： 在 github 仓库下，使用 git config --local user.name 'name' && git config --local user.email 'email' 为 github 仓库设置独立的账号。
+3. 至此，使用 ssh -T git@github 和 ssh -T git@gitlab 看是否完成 ssh 权限配置。
 
 
 ## hexo d 时无权限
@@ -42,7 +28,9 @@ debug1: No more authentication methods to try.
 Permission denied (publickey).
 ```
 
-其中最后几行 `Trying private key ...` 看出，没有使用第一步中生成的 `id_rsa_github` 配置，考虑是 ssh 的 config 配置写法有误，改为如下后正常：
+其中最后几行 `Trying private key ...` 看出，没有使用第一步中生成的 `id_rsa_github` 配置
+
+在~/.ssh/目录下，增加 config 文件，加上一下内容搞定
 
 ``` bash
 # gitlab
