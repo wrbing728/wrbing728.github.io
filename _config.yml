@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 冰冰啊
+title: 冰冰啊！(•́ωก̀)
 subtitle:
 description:
 author: John Doe
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: TRNexT
+theme: maupassant
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
