@@ -43,3 +43,5 @@ Host github
   HostName github.com
   IdentityFile ~/.ssh/id_rsa_github
 ```
+
+** ssh: Could not resolve hostname github: nodename nor servname provided, or not known ：查看 git remote url 是否一致（ssh or https）**
